@@ -5,4 +5,3 @@ webxr-assignment-heirsall created by GitHub Classroom
 **Mochamad Thiesa Nabil**
 0511174000194
 
-![Image of Numpad](/Simple Numpad.png)
