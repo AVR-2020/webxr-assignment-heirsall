@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame Super Keyboard - Numeric Pad</title>
+    <meta name="description" content="Numpad for Super Keyboard."></meta>
+    <script src="https://rawgit.com/aframevr/aframe/c4aa63e/dist/aframe-master.min.js"></script>
+    <script src="dist/aframe-super-keyboard.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <!-- Environment -->
+    <a-scene environment="preset: starry; 
+    skyColor: #ffba93; 
+    horizonColor: #ff8e71; 
+    ground: hills; 
+    groundTexture: checkerboard; 
+    groundColor: #333333; 
+    groundColor2: #555555; 
+    dressing: trees; 
+    dressingScale: 3; 
+    grid: none">
+      <a-entity cursor="rayOrigin: mouse"></a-entity>
+
+      <a-entity id="hand" laser-controls="hand: right">
+        <a-sphere radius="0.03"></a-sphere>
+      </a-entity>
+
+      <!-- Ganti hand `#hand` buat VR. -->
+      <a-entity
+        id="keyboard"
+        position="0 1.2 -0.5"
+        rotation="-30 0 0"
+        super-keyboard="hand: #mouseCursor; imagePath: asset/; filters: numbers; model: numpad; align: center; maxLength: 6"
+        passfilter></a-entity>
+    </a-scene>
+    
+  </body>
+</html>
